@@ -11,22 +11,22 @@ For details on how to use this sample as a template in Cloud Code, read the docu
 
 ---
 ## Getting Started with VS Code
+create mysql database buddha:
+CREATE TABLE author (
+  id int(12) NOT NULL AUTO_INCREMENT,
+  name varchar(200) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY name (name)
+)
 
-### Run the app locally with the Cloud Run Emulator
-1. Click on the Cloud Code status bar and select 'Run on Cloud Run Emulator'.  
-![image](./img/status-bar.png)
-
-2. Use the Cloud Run Emulator dialog to specify your [builder option](https://cloud.google.com/code/docs/vscode/deploying-a-cloud-run-app#deploying_a_cloud_run_service). Cloud Code supports Docker, Jib, and Buildpacks. See the skaffold documentation on [builders](https://skaffold.dev/docs/pipeline-stages/builders/) for more information about build artifact types.  
-![image](./img/build-config.png)
-
-3. Click ‘Run’. Cloud Code begins building your image.
-
-4. View the build progress in the OUTPUT window. Once the build has finished, click on the URL in the OUTPUT window to view your live application.  
-![image](./img/cloud-run-url.png)
-
-5. To stop the application, click the stop icon on the Debug Toolbar.
-
----
+insert into author(id,name) values (5,'Alan Dean Foster');
+insert into author(id,name) values (19,'Brigitte Voit');
+insert into author(id,name) values (3,'Cass R. Sunstein');
+insert into author(id,name) values (9,'Cay S. Horstmann');
+insert into author(id,name) values (16,'Dietrich Braun');
+insert into author(id,name) values (8,'Gary Cornell');
+insert into author(id,name) values (2,'George Lucas');
+insert into author(id,name) values (6,'George R. R. Martin');
 ## Getting Started with IntelliJ
 
 ### Run the app locally with the Cloud Run Emulator
